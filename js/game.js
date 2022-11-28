@@ -26,10 +26,27 @@ let secondCard = '';
 
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
+  const casa = parseInt(Math.random()* 5 + 1);
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop);
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}! 50 pontos para Sonserina!!`);
+    switch (casa){
+            case 1:
+                 casa = " 50 pontos para Grifinória!!!";
+                 break;
+             case 2:
+                 casa = " 50 pontos para Sonserina!!!";
+                 break;
+             case 3:
+                 casa = " 50 pontos para Corvinal!!!";
+                 break;
+             case 4:
+                 casa = " 50 pontos para Lufa-Lufa!!!";
+                 break;
+            default:
+                casa = " 50 pontos para Sonserina!!!";
+        }
+    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}! $casa`);
   }
 }
 
