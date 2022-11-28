@@ -30,23 +30,24 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop);
+    let hogwarts;
     switch (casa){
             case 1:
-                 casa = " 50 pontos para Grifinória!!!";
+                 hogwarts = " 50 pontos para Grifinória!!!";
                  break;
              case 2:
-                 casa = " 50 pontos para Sonserina!!!";
+                 hogwarts = " 50 pontos para Sonserina!!!";
                  break;
              case 3:
-                 casa = " 50 pontos para Corvinal!!!";
+                 hogwarts = " 50 pontos para Corvinal!!!";
                  break;
              case 4:
-                 casa = " 50 pontos para Lufa-Lufa!!!";
+                 hogwarts = " 50 pontos para Lufa-Lufa!!!";
                  break;
             default:
-                casa = " 50 pontos para Sonserina!!!";
+                hogwarts = " 50 pontos para Sonserina!!!";
         }
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}! $casa`);
+    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}! `+hogwarts);
   }
 }
 
